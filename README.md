@@ -1,4 +1,3 @@
-PointPicker
-===========
-
-Code to picking latlngs from google maps (version 3)
+trafficeye
+==========
+Provides real-time traffic updates for Accra and other Ghanaian cities, using maps for viualisation.
