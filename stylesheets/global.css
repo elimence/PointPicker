@@ -1,0 +1,95 @@
+body {
+	margin: 0;
+	padding: 0;
+	/*background-color: #FEFBFB;*/
+}
+#header {
+	/*border: 1px solid #f00;*/
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding-top: 0.7em;
+	padding-bottom: 0.7em;
+	-webkit-box-shadow: 0px 1px 15px rgba(30, 30, 30, 0.75);
+	-moz-box-shadow:    0px 1px 15px rgba(30, 30, 30, 0.75);
+	box-shadow:         0px 1px 15px rgba(50, 50, 50, 0.75);
+	height: 5em;
+}
+#header #header_content_wrapper {
+	width: 98%;
+	margin: 0 auto;
+	border: 0px solid #bbb;
+	position: relative;
+}
+#header #brand {
+	display: inline-block;
+	/*border: 1px solid #f00;*/
+	line-height: 2.6em;
+}
+#header #tagline {
+	display: inline-block;
+	/*border: 1px solid #f00;*/
+	font-family: 'Lato', sans-serif;
+	font-family: 'Bubblegum Sans', cursive;
+	font-style: italic;
+	font-size: 2.2em;
+	margin-left: 3%;
+}
+#header #locations_list {
+	display: inline-block;
+	margin-left: 11%;
+	box-shadow: 0px 0px 14px rgba(0,0,0,0.3);
+	height: 2.1em;
+	background-color: transparent;
+	border-radius: 4px;
+}
+#header #locations_list select {
+	display: block;
+	/*border: 1px double #777;*/
+	/*background-color: #39599f;*/
+	/*color: #fff;*/
+	font-weight: bold;
+	color: #2875dc;
+
+}
+#header #links{
+	/*border: 1px solid #bbb;*/
+	width: 30.0%;
+	display: inline-block;
+	position: absolute;
+	right: 0;
+	top: 1em;
+	text-align: right;
+}
+#header #links img.social{
+	width: 36px;
+	height: 36px;
+}
+#header #links ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+#header #links ul li{
+	display: inline-block;
+	/*border: 1px solid #bbb;*/
+	margin-right: 1.0em;
+}
+#header #links li#feedback_link {
+	position: relative;
+	top: 0.2em;
+}
+#header #feedback:link, #header #feedback:visited {
+	font-size: 1.6em;
+	font-family: 'Autour One', cursive;
+	color: #333;
+	position: relative;
+	top: 2px;
+}
+#header #feedback:hover, #header #feedback:active {
+	text-decoration: none;
+	color: #F51000;
+}
+
+/*Misc*/

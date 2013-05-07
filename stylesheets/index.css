@@ -1,0 +1,95 @@
+#body {
+	margin-top: 6.8em;
+	/*border: 1px solid #f00;*/
+	position: relative;
+	height: 40.3em;
+}
+#body #map_canvas {
+	/*border: 1px solid #bbb;*/
+	width: 74.2%;
+	height: 41.5em;
+	float: left;
+}
+#body #sidebar {
+	/*border: 1px solid #f00;*/
+	width: 25.5%;
+	float: right;
+	height: 40.3em;
+}
+#sidebar #tweets {
+	/*border: 1px solid #f00;*/
+	height: 37.5em;
+	text-align: center;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: bold;
+}
+#sidebar #map_legend {
+	/*border: 1px solid #f00;*/
+	text-align: center;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: bold;
+	margin-top: 1.9em;
+}
+#map_legend a:link, #map_legend a:visited {
+	color: #F59F00;
+	font-size: 1.6em;
+}
+#map_legend a:hover, #map_legend a:active {
+	color: #ffd700;
+	text-decoration: none;
+}
+
+
+
+
+
+/*Modal styles begin here*/
+#feedback_modal {
+    /*border-radius: 25px;*/
+}
+.modal_header {
+    text-align: center;
+    background-color: #2875dc;
+    color: #fff;
+    font-family: 'Bubblegum Sans', cursive;
+}
+.modal_header h3 {
+    font-size: 1.85em;
+    /*letter-spacing: 0.05em;*/
+}
+.modal_header button{
+    color: #fff;
+    opacity: 0.7;
+}
+.modal-body {
+    padding: 1.3em 1.1em;
+    font-family: helvetica, sans-serif;
+    font-family: 'Bitter', serif;
+    font-size: 1.4em;
+    line-height: 1.3em;
+    text-align: center;
+}
+.modal-body form {
+	/*border: 1px solid #bbb;*/
+	width: 85%;
+	margin: 0 auto;
+}
+.modal-body form div {
+	width: 100%;
+}
+.modal-body .input {
+	width: 90%;
+	font-size: 0.8em;
+}
+#feedback_modal #submit_feedback {
+	width: 25%;
+	font-size: 1.2em;
+	margin-right: 11.5%;
+}
+#feedback_modal #close_btn {
+	/*margin-right: 5%;*/
+}
+.notification_success_text {
+    color: #008100;
+    font-family: 'Sintony', sans-serif;
+}

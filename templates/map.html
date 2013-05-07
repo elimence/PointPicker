@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Traffic-Eye - Know before you go!</title>
+		<meta charset="UTF-8" />
+        <meta name="description" content="Ghana Public Transport Prices App" />
+        <meta name="keywords" content="ghana, taxi, fare, prices, transport, travel" />
+        <meta name="author" content="Traffic-Eye" />
+		<!-- Bootstrap -->
+        <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.min.css" />
+        <!-- Tooltips -->
+        <link rel="stylesheet" type="text/css" href="/stylesheets/tooltipster.css" />
+        <!-- Global Styles -->
+        <link rel="stylesheet" type="text/css" href="/stylesheets/global.css" />
+		<!-- Index Page Styling -->
+		<link rel="stylesheet" type="text/css" href="/stylesheets/index.css" />
+		<!-- Web Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Bubblegum+Sans|PT+Sans+Narrow|Open+Sans+Condensed:300|Londrina+Shadow' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Lato:700italic' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Bubblegum+Sans|Noto+Serif' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Autour+One' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Fondamento' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Sintony' rel='stylesheet' type='text/css'>
+        <!-- Scripts -->
+        <script src="/scripts/jquery.min.js"></script>
+    </head>
+    <body>
+    	<div id="header">
+    		<div id="header_content_wrapper">
+    			<div id="brand">
+	    			<a href="/" style=""><img src="/images/logo30.png" style="border:0px solid #bbb;"></a>
+	    		</div>
+	    		<div id="tagline">
+	    			<span>Receive traffic updates on-the-go!</span>
+	    		</div>
+                <div id="locations_list">
+                    <select name="locations" id="locations">
+                        <option value="#">See updates by location</option>
+                        <option value="#">Location 1</option>
+                        <option value="#">Location 2</option>
+                        <option value="#">Location 3</option>
+                        <option value="#">Location 4</option>
+                        <option value="#">Location 5</option>
+                    </select>
+                </div>
+	    		<div id="links">
+	    			<ul>
+	    				<li><a href="http://www.facebook.com/nyarkoprecious"><img src="/images/facebook_hover.png" class="social"></a></li>
+	    				<li><a href="https://twitter.com/kofi_ewusi"><img src="/images/twitter_hover.png" class="social"></a></li>
+	    				<li><a href="#"><img src="/images/google_hover.png" class="social"></a></li>
+	    				<li id="feedback_link"><a href="#" id="feedback">Feedback</a></li>
+	    			</ul>
+	    		</div>
+    		</div>
+    	</div>
+    	<div id="body">
+    		<div id="map_canvas"></div>
+    		<div id="sidebar">
+    			<div id="tweets">
+    				<a class="twitter-timeline" href="https://twitter.com/search?q=%23trafficeye" data-widget-id="326669558352052225">Tweets about "#trafficeye"</a>
+                    <script>
+                    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+                    </script>
+    			</div>
+    			<div id="map_legend">
+    				<a href="" class="legendtip" title="<img src='/images/legend.PNG' width='200' height='100' />">Show map legend</a>
+    			</div>
+    		</div>
+            <!-- Feedback Modal -->
+            <div id="feedback_modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="feedback_label" aria-hidden="true">
+                <div class="modal-header modal_header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> x </button>
+                    <h3 id="feedback_label">We'd love to hear from you!</h3>
+                </div>
+                <div class="modal-body modal_body">
+                    <div id="modal_body_content">
+                        <form name="feedback_form" id="feedback_form" method="POST">
+                            <div>
+                                <input name="email" id="email" type="email" placeholder="Leave your email address (optional)" class="input email_errortip" title="Check your email address" />
+                            </div>
+                            <div>
+                                <textarea name="message" id="message" rows="4" cols="10" placeholder="Whats on your mind?" class="input message_errortip" title="This field is required"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="close_btn" class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+                    <button id="submit_feedback" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+    	</div>
+
+        <script src="/scripts/bootstrap.min.js"></script>
+		<script type="text/javascript" src="/scripts/jquery.tooltipster.js"></script>
+		<script type="text/javascript">
+            $(function() {
+                $('.legendtip').tooltipster({
+                    position: 'top',
+                    animation: 'fade',
+                    theme: '.tooltipster-shadow',
+                    offsetY: 90,
+                });
+                $('.email_errortip').tooltipster({
+                    position: 'top',
+                    animation: 'swing',
+                    theme: '.tooltipster-green-error',
+                });
+                $('.message_errortip').tooltipster({
+                    position: 'top',
+                    animation: 'swing',
+                    theme: '.tooltipster-green-error',
+                });
+                $('.email_errortip').tooltipster('disable');
+                $('.message_errortip').tooltipster('disable');
+            });
+		</script>
+        
+        <!-- TEST CODE - DELETE LATER -->
+        <link rel="stylesheet" type="text/css" href="/stylesheets/transient.css" />
+        <script src="/scripts/transient.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
+        <script src="/scripts/jquery.keystrokes.min.js"></script>
+        <script>
+            $(document).bind('keystrokes', {
+                // The key pattern you set your element to listen for
+                keys: ['s', 't', 'a', 'r', 't']                
+            }, function(event){
+                Main();
+            });
+        </script>
+
+        <!-- END OF TEST CODE -->
+
+
+        
+        <script src="/scripts/helpful.js"></script>
+        <script src="/scripts/rollover.js"></script>
+        <script src="/scripts/utils.js"></script>
+        <script src="/scripts/feedback.js"></script>
+        <script async src="http://maps.googleapis.com/maps/api/js?sensor=false&callback=go"></script>
+        <script src="/scripts/map.js"></script>
+        <script type="text/javascript">
+           // addListener(window, "load", init, false);
+           addListener(window, "load", Rollover.init, false);
+        </script>
+
+    </body>
+</html>
